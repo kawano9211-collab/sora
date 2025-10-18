@@ -1,0 +1,206 @@
+.yoko {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button-49 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 auto;
+    padding: .9em 2em;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 0 3px #d7bd60;
+    background-color: #d7bd60;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.hamburger {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    /* ← 右上に配置！ */
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    background: #333;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* ナビゲーション（右に隠れてる） */
+nav {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    /* ← 最初は右に隠れてる */
+    width: 250px;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav.active {
+    right: 0;
+    /* ← アクティブになると出てくる */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    padding: 15px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.box-010 {
+    position: relative;
+    max-width: 400px;
+    margin: 1.5em auto;
+    padding: 2.5em 1.5em 1.5em;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 20%);
+    background-color: #fdde6d;
+    color: #333333;
+}
+
+.box-010 span {
+    position: absolute;
+    top: -15px;
+    transform: translateX(-.3em) rotate(-5deg);
+    padding: .5em 2em;
+    border-right: 2px dotted rgb(0 0 0 / 10%);
+    border-left: 2px dotted rgb(0 0 0 / 10%);
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    background-color: rgb(255 255 255 / 40%);
+    font-weight: 600;
+}
+
+.box-010 p {
+    margin: 0;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    background-color: #333333a2;
+    text-align: center;
+    flex: none;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    #responsive-text {
+        text-align: left;
+        padding-left: 50px;
+    }
+}
+
+.container {
+    max-width: 900px;
+    /* 中央寄せしたい幅 */
+    margin: 0 auto;
+    /* 左右中央に寄せる */
+    padding: 0 20px;
+    /* スマホでも余白をつける */
+}
+
+.like-button {
+    padding: 10px 20px;
+    background-color: #f9c33c00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.f {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.f img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.box-003 {
+
+    margin: 0 auto;
+    padding: 1em 1.5em;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 5%), 0 2px 3px -2px rgb(0 0 0 / 1%);
+    background-image: linear-gradient(transparent calc(100% - 1px), #e6edf3 50%, #e6edf3), linear-gradient(90deg, transparent calc(100% - 1px), #e6edf3 50%, #e6edf3);
+    background-repeat: repeat;
+    background-color: #ffffff;
+    color: #000000;
+    background-size: 15px 15px;
+}
+
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    animation: fadeOut 2s ease 2s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.main {
+    padding: 50px;
+}
